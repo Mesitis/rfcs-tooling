@@ -25,7 +25,7 @@ Release Versions:
   ember-source: vX.Y.Z
   ember-data: vX.Y.Z
 Relevant Team(s): Ember.js 
-RFC PR: https://github.com/Mesitis/rfcs/pull/123
+RFC PR: https://github.com/mesitis/rfcs/pull/123
 ---`;
 
 const missingReleaseDataMarkdown = `---
@@ -83,7 +83,7 @@ describe('FrontmatterLinter', function () {
     expect(results.messages).to.deep.eql([
       'Start Date must be a date formatted YYYY-MM-DD',
       'Relevant Team(s) must be a list of one or more Ember teams',
-      'RFC PR must be the URL for the original pull request on emberjs/rfcs, for example: https://github.com/emberjs/rfcs/pull/123',
+      'RFC PR must be the URL for the original pull request on Mesitis/rfcs, for example: https://github.com/Mesitis/rfcs/pull/123',
     ]);
   });
 
@@ -91,7 +91,7 @@ describe('FrontmatterLinter', function () {
     let results = FrontmatterLinter.lint(nonExistentStageMarkdown);
 
     expect(results.messages).to.deep.eql([
-      `Stage must be one of the RFC Stages: "Proposed", "Exploring", "Accepted", "Ready for Release", "Released", "Recommended" (See https://github.com/emberjs/rfcs#stages)`,
+      `Stage must be one of the RFC Stages: "Proposed", "Exploring", "Accepted", "Ready for Release", "Released", "Recommended" (See https://github.com/Mesitis/rfcs#stages)`,
     ]);
   });
 
@@ -108,7 +108,7 @@ describe('FrontmatterLinter', function () {
     let results = FrontmatterLinter.lint(wrongURLForRFCMetadataMarkdown);
 
     expect(results.messages).to.deep.eql([
-      'RFC PR must be the URL for the original pull request on emberjs/rfcs, for example: https://github.com/emberjs/rfcs/pull/123',
+      'RFC PR must be the URL for the original pull request on Mesitis/rfcs, for example: https://github.com/Mesitis/rfcs/pull/123',
     ]);
   });
 
