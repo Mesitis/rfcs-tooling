@@ -10,19 +10,19 @@
   "author": "Katie Gengler",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-mocha": "^8.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "mocha": "^8.1.3",
-    "prettier": "^2.1.2"
+    "prettier": "^2.4.1"
   },
   "dependencies": {
     "@github-docs/frontmatter": "^1.3.1",
-    "chalk": "^4.1.0",
-    "semver": "^7.3.2",
-    "yargs": "^16.0.3"
+    "chalk": "^4.1.2",
+    "semver": "^7.3.5",
+    "yargs": "^17.2.1"
   }
 }
