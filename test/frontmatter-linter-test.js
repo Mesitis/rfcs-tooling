@@ -25,7 +25,7 @@ Release Versions:
   ember-source: vX.Y.Z
   ember-data: vX.Y.Z
 Relevant Team(s): Ember.js 
-RFC PR: https://github.com/emberjs/rfcs/pull/123
+RFC PR: https://github.com/Mesitis/rfcs/pull/123
 ---`;
 
 const missingReleaseDataMarkdown = `---
@@ -36,7 +36,7 @@ Release Versions:
   ember-source: vX.Y.Z
   ember-data: vX.Y.Z
 Relevant Team(s): Ember.js
-RFC PR: https://github.com/emberjs/rfcs/pull/123/
+RFC PR: https://github.com/Mesitis/rfcs/pull/123/
 ---`;
 
 const completedMetadataMarkdown = `---
@@ -47,7 +47,7 @@ Release Versions:
   ember-source: v1.1.1
   ember-data: v0.0.3
 Relevant Team(s): Ember.js 
-RFC PR: https://github.com/emberjs/rfcs/pull/123
+RFC PR: https://github.com/Mesitis/rfcs/pull/123
 ---`;
 
 const wrongURLForRFCMetadataMarkdown = `---
@@ -58,18 +58,7 @@ Release Versions:
   ember-source: v1.1.1
   ember-data: v0.0.3
 Relevant Team(s): Ember.js 
-RFC PR: https://github.com/emberjs/rfcs/pull/123/files
----`;
-
-const cliUrlForRFCMetadataMarkdown = `---
-Stage: Recommended
-Start Date: 2020-01-01 
-Release Date: 2020-04-02 
-Release Versions:
-  ember-source: v1.1.1
-  ember-data: v0.0.3
-Relevant Team(s): Ember.js 
-RFC PR: https://github.com/ember-cli/rfcs/pull/123
+RFC PR: https://github.com/Mesitis/rfcs/pull/123/files
 ---`;
 
 describe('FrontmatterLinter', function () {
@@ -125,11 +114,6 @@ describe('FrontmatterLinter', function () {
 
   it('reports NO errors for completed metadata', function () {
     let results = FrontmatterLinter.lint(completedMetadataMarkdown);
-    expect(results.messages).to.be.empty;
-  });
-
-  it('reports NO errors for completed metadata with CLI RFC URL', function () {
-    let results = FrontmatterLinter.lint(cliUrlForRFCMetadataMarkdown);
     expect(results.messages).to.be.empty;
   });
 });
